@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(nature3.jpg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        .form-box{
+            width: 350px;
+            height: 450px;
+            background: white;
+            margin: 7% auto;
+            position: relative;
+            padding: 5px;
+            overflow: hidden;
+        }
+        .button-box{
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 3px #9AFBFA;
+            border-radius: 35px;
+        }
+        .toggle-btn{
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        #btn{
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, #9AFBFA,#D071F9);
+            border-radius: 30px;
+            transition: 1s;
+        }
+        .social-media{
+            margin: 30px auto;
+            text-align: center;
+        }
+        .social-media img{
+            width: 50px;
+            box-shadow: 0 0 20px 0 #f7f7f7;
+            cursor: pointer; 
+        }
+        .login-form{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: 1s;
+        }
+        .form-field{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 2px solid #999;
+            outline: none;
+            background: transparent;
+        }
+        .submit{
+            width: 85%;
+            padding: 10px 35px;
+            cursor: pointer;
+            display: block;
+            margin-bottom: auto;
+            background: linear-gradient(to right, #9AFBFA,#D071F9);
+            border: 0;
+            outline: none;
+            border-radius: 25px;
+        }
+        .checkbox{
+            margin: 30px 5px;
+        }
+        span
+        {
+            color: #777;
+            font-size: 12px;
+        }
+        #login
+        {
+            left: 50px;
+        }
+        #register
+        {
+            left: 450px;
+        }
+    </style>
+    <title>Create account</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">LogIn</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-media">   
+            <a href="https://instagram.com/aks1011019"><img src="insta.png" /></a>
+            <a href="https://www.snapchat.com/add/aman1011019?share_id=FETIs8CAlrE&amp;locale=en-IN">
+                <img src="snap.png" /></a>
+            <a href="https://twitter.com/aman1011019"><img src="twitter.png" /></a>
+        </div>
+        <form class="login-form" id="login">
+            <input type="text" class="form-field" placeholder="Username" required>
+            <input type="password" class="form-field" placeholder="Password" required>
+            <input type="checkbox" class="checkbox"><span>Rember Password</span>
+            <center><button type="submit" class="submit">LogIn</button></center>
+        </form>
+        <form class="login-form" id="register">
+            <input type="text" class="form-field" placeholder="Username" required>
+            <input type="email" class="form-field" placeholder="Email Address" required>
+            <input type="password" class="form-field" placeholder="Password" required>
+            <input type="checkbox" class="checkbox"><span>I accept terms & condition</span>
+            <center><button type="submit" class="submit">Register</button></center>
+        </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function register()
+        {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login()
+        {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+</html>
